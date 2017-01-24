@@ -1,0 +1,258 @@
+/*
+    CallMe-Server: It's a software for sending callback requests from web sites
+
+    file: callme.css
+
+    Copyright (C) 2016-2017  Vladimir Kamensky
+    Copyright (C) 2016-2017  Master Soft LLC.
+    All rights reserved
+
+
+  BSD License
+
+  Redistribution and use in source and binary forms, with or without modification, are
+  permitted provided that the following conditions are met:
+
+  - Redistributions of source code must retain the above copyright notice, this list of
+    conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright notice, this list
+    of conditions and the following disclaimer in the documentation and/or other
+    materials provided with the distribution.
+  - Neither the name of the "Vladimir Kamensky" or "Master Soft LLC." nor the names of
+    its contributors may be used to endorse or promote products derived from this
+    software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY E
+  XPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES O
+  F MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SH
+  ALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENT
+  AL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROC
+  UREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS I
+  NTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRI
+  CT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF T
+  HE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+    /*Simple square button with pulse animation*/
+
+
+
+.callmebutton-wrapper{
+/*    position: absolute;
+    left:100px;
+    top:100px;
+    display: block;
+    float:right;
+    margin-right: 200px;*/
+    position: fixed;
+    opacity: 0.4;
+    right: 10px;
+    top: 100px;
+    display: block;
+    cursor: pointer;
+    
+    
+}
+
+.callmebutton-wrapper:hover{
+    opacity: 1;
+    
+}
+
+
+
+
+@-webkit-keyframes pulsat {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.999, 0.999);
+  }
+
+  50% {
+    transform: scale(0.8, 0.8);
+  }
+
+  75% {
+    transform: scale(0.999, 0.999);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes pulsat {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.999, 0.999);
+  }
+
+  50% {
+    transform: scale(0.95, 0.95);
+  }
+
+  75% {
+    transform: scale(0.999, 0.999);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+
+
+
+
+
+
+
+.callmebutton-box{
+    
+    width: 160px;
+    height: 40px;
+    background-color: red;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+    cursor: pointer; cursor: hand; 
+    border:2px solid yellow;
+    text-shadow: 1px 1px 2px yellow ;
+    
+    
+    
+/*    
+        box-sizing: content-box !important;
+    position: fixed !important;
+    bottom: 48%;
+    right: 40px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    text-align: center;
+    opacity: .9;*/
+    animation: pulsat 1s ease-out;
+    animation-iteration-count: infinite;
+    z-index: 9999 !important;
+}
+
+
+
+
+
+.callmebutton{
+    margin: 1px;
+    line-height: 35px;
+    text-decoration: none;
+}
+
+.callmebutton{
+    
+    
+}
+
+
+.callmebutton>span{
+    
+ 
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.callmeform-box{
+    opacity: 0;
+    font-family: arial;
+    display: none; 
+    height: 330px;
+    width: 300px;
+    padding: 15px;
+    background-color: yellow;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+    border: 1px solid black
+}
+
+.callmeform-caption{
+    text-align: center;
+    font-family: arial;
+    font-size: 13pt;
+    padding-bottom: 20px;
+}
+
+.callme_form_element_box{
+    
+    padding-bottom: 20px;
+}
+
+.callme_form_element_box label{
+    font-size: 10pt;
+}
+
+
+.callme_form_element_box input{
+        padding: 3pt;
+    border-radius: 7pt;
+}
+
+.callme_form_input{
+    
+    width: 200pt;
+}
+
+ .button {
+     padding-top: 10pt;
+    text-align: center;
+}
+
+.button input{
+    
+    padding: 7pt;
+    border-radius: 5pt;
+    background-color: #ffff99;
+}
+
+.input_error{
+    border: 2px solid red;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+.callmemessage-box{
+    opacity: 0;
+    font-family: arial;
+    display: none; 
+    height: 130px;
+    width: 300px;
+    padding: 15px;
+    background-color: yellow;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+    border: 1px solid black
+    
+}
+
+.callme_message_form_text{
+    
+    text-align: center;
+    font-family: arial;
+    font-size: 13pt;
+    padding-bottom: 20px;
+    
+}
+
+
+
+
+
+
