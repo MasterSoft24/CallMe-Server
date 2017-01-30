@@ -63,7 +63,7 @@ $cfg= str_replace("%%PASS%%", $pass, $cfg);
 $cfg= str_replace("%%DB%%", $db, $cfg);
 $cfg= str_replace("%%OPPASS%%", $cm_pass, $cfg);
 
-umask(0);
+//umask(0);
 
 unlink("../config.php");
 $r=file_put_contents("../config.php", $cfg);

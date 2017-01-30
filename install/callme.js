@@ -36,7 +36,7 @@
 
 
 var CallMeMessages_EN={
-  "formCaption": "Leave your phone number and we call back to you",
+  "formCaption": "Leave your phone number and we'll callback to you",
   "nameLabel":"What is your name?",
   "namePlaceholder":"Your name",
   "phoneLabel":"Your phone number?",
@@ -70,7 +70,7 @@ function CallMeText(){
 
     
     
-    this.defaultLang="ru";
+    this.defaultLang="en";
     
     this.getText=function(id){
         return texts[this.defaultLang][id];
@@ -120,7 +120,7 @@ function callMe(){
         <div class='callmeform-box'><div class='callmeform-caption'>"+this.text.getText("formCaption")+"</div>\
         <div class='callme_form_element_box'><label for='callme_name'>"+this.text.getText("nameLabel")+"</label><input placeholder='"+this.text.getText("namePlaceholder")+"' class='callme_form_input' type='text' name='callme_name' id='callme_name'/></div>\
         <div class='callme_form_element_box'><label for='callme_phone'>"+this.text.getText("phoneLabel")+"</label><input placeholder='"+this.text.getText("phonePlaceholder")+"' class='callme_form_input' type='text' name='callme_phone' id='callme_phone'/></div>\
-        <div class='callme_form_element_box button'><input onClick='CALLME.send()' type='button' value='"+this.text.getText("formButton")+"' /></div>\\n\
+        <div class='callme_form_element_box button'><input onClick='CALLME.send()' type='button' value='"+this.text.getText("formButton")+"' />\
         <input onClick='CALLME.formHide();' type='button' value='"+this.text.getText("formButtonLater")+"' /></div>\
         </div>");        
         
